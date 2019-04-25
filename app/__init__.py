@@ -24,7 +24,7 @@ def resolve_ping(_, info, creator=None):
 
 subscription = SubscriptionType()
 
-@subscription.source
+@subscription.source('counter')
 async def counter_generator(obj: Any, info: GraphQLResolveInfo) -> AsyncGenerator[int, None]:
     for i in range(5):
         await asyncio.sleep(1)
