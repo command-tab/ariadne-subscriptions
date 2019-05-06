@@ -3,6 +3,7 @@ from graphql.type import GraphQLResolveInfo
 from typing import Any, AsyncGenerator
 from ariadne import gql
 from ariadne.asgi import GraphQL
+import asyncio
 
 query_typedef = gql("""
     type Query {
