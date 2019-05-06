@@ -30,7 +30,7 @@ async def counter_generator(obj: Any, info: GraphQLResolveInfo) -> AsyncGenerato
         await asyncio.sleep(1)
         yield i
 
-@subscription.field
+@subscription.field('counter')
 def counter_resolver(count: int, info: GraphQLResolveInfo) -> int:
     return count + 1
 
